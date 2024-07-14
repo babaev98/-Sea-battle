@@ -198,7 +198,7 @@ class Game:
             for length in result.list_ship:
                 x = 0
                 while True:
-                    x = 0
+                    x += 1
                     try:
                         self.creating_a_field_ai(result, length)
                     except MyException:
@@ -259,12 +259,12 @@ class Game:
         while True:
             while one.move():
                 pass
-            if two.onw.list_ship == 0:
+            if two.onw.living_ships == 0:
                 print('Победил игрок')
                 break
             while two.move():
                 pass
-            if one.onw.list_ship == 0:
+            if one.onw.living_ships == 0:
                 print('Игрок проиграл')
                 break
 
