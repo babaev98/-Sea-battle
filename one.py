@@ -206,6 +206,7 @@ class Game:
                     else:
                         break
                     if x > 1000:
+                        result.living_ships = 0
                         result.field = [['O' for x in range(6)] for y in range(6)]
                         self.creating_a_field(result)
                         print('Не получилось сейчас попробует еще раз')
